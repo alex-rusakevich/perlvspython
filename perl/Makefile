@@ -1,5 +1,5 @@
 clres:
-	rm -rf ../*.pas.txt
+	rm -rf ../*.perl.txt
 
 test:
 	perl paslex.t

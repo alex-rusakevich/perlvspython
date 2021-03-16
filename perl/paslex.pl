@@ -74,7 +74,7 @@ sub lex_file {
     }
     shift @result;
 
-    open(my $file_out, ">:utf8", $filename.".txt");
+    open(my $file_out, ">:utf8", $filename.".perl.txt");
 
     foreach my $item (@result) {
         my %item = %{$item};

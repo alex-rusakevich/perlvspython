@@ -5,7 +5,7 @@ use utf8;
 
 use Test::More tests => 4;
 
-require_ok '/mnt/d/Development/perl/paslex.pl';
+require_ok './paslex.pl';
 
 sub read_all {
     my ($filename) = @_;
@@ -18,7 +18,7 @@ sub read_all {
 map { ok(
     do {
         print "Testing $_...\n";
-        lex_file($_);
-        read_all($_.".txt") eq read_all($_.".ref.txt"); 
+        lex_file('../'.$_);
+        read_all('../'.$_.".perl.txt") eq read_all('../'.$_.".ref.txt"); 
     }, "Tested $_")
 } qw{prog1.pas prog2.pas prog3.pas};
