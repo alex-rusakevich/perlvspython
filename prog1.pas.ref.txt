@@ -1,0 +1,11 @@
+program - keyword at 0
+Hello - name at 8
+; - spec_char at 13
+begin - keyword at 18
+writeln - name at 29
+( - spec_char at 36
+'Hello World!' - string at 37
+) - spec_char at 51
+; - spec_char at 52
+end - keyword at 74
+. - spec_char at 77
