@@ -44,7 +44,7 @@ sub lex_file {
                 push @result, {
                     body => $&,
                     type => "keyword",
-                    start => $- + $rel_pos
+                    start => $rel_pos
                 };
                 $text = substr $text, length($&);
                 $rel_pos += length($&);
