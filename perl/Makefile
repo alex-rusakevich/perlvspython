@@ -41,3 +41,8 @@ timesc:
 	do\
 		make timec;\
 	done
+
+compile:
+	perl -MO=C,-opaslex.c paslex.pl
+	cc_harness -O2 -Duseshrplib -o paslex paslex.c
+	strip --strip-all paslex
