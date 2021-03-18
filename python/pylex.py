@@ -70,4 +70,5 @@ def lex_file (filename):
     return 1
 
 if __name__ == "__main__":
-    lex_file(sys.argv[1])
+    if len(sys.argv)>1:
+        lex_file(sys.argv[1])

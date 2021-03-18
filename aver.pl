@@ -5,7 +5,7 @@ use utf8;
 
 sub process_log {
     my ($filename, $lang) = @_;
-    open(my $file_in, "<:utf8", $filename) or die "Error while opening file.";
+    open(my $file_in, "<:utf8", $filename) or die "Error while opening file $filename";
 
     my $num = 0;
     my @reals = [];
@@ -39,7 +39,7 @@ sub process_log {
         $users_real += $i;
     }
     print $file_out "Average user time is ".$users_real/$num."\n";
-    print $file_out "Their sum is ".($aver_real/$num+$users_real/$num)."\n\n";
+    print $file_out "Their sum is ".($aver_real/$num+$users_real/$num)."\n";
 }
 
 sub main {

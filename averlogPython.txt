@@ -1,5 +1,0 @@
-Python:
-Average real time is 0.332
-Average user time is 0.271
-Their sum is 0.603
-
