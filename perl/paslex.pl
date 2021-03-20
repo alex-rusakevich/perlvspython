@@ -84,8 +84,8 @@ sub lex_file {
     return 1;
 }
 
-if ($ARGV[1]) {
-    lex_file($ARGV[1])
+if ($ARGV[0]) {
+    lex_file($ARGV[0])
 }
 
 1;

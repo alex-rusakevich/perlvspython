@@ -1,7 +1,7 @@
 .PHONY: clres time tentimes runa
 
 clres:
-	rm -rf ../*.perl.txt perlog.txt
+	rm -rf ../*.perl.txt perlog.txt perbclog.txt
 
 test:
 	perl paslex.t
@@ -13,12 +13,12 @@ runfc:
 	./paslex $(file)
 
 runa:
-	for number in 1 2 3; do\
+	for number in 3; do\
 		perl -e "require './paslex.pl'; lex_file(\"../prog$$number.pas\");"; \
 	done
 
 runac:
-	for number in 1 2 3; do\
+	for number in 3; do\
 		./paslex ../prog$$number.pas; \
 	done
 
@@ -27,8 +27,8 @@ time:
 	echo "" >> perlog.txt
 
 timec:
-	/usr/bin/time -ap -o perlog.txt make runac
-	echo "" >> perlog.txt
+	/usr/bin/time -ap -o perbclog.txt make runac
+	echo "" >> perbclog.txt
 
 times:
 	for n in `seq 1 $(n)`;\

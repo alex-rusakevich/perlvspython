@@ -7,7 +7,7 @@ runf:
 	python3 pylex.py ../$(file)
 
 runa:
-	for n in 1 2 3; do\
+	for n in 3; do\
 		python3 pylex.py ../prog$$n.pas; \
 	done
 
